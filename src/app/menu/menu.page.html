@@ -1,29 +1,48 @@
 <!-- <ion-split-pane when="false"> -->
-  <ion-split-pane when="false">
-    <!-- type="push" The display type of the menu. Available options: "overlay", "reveal", "push". -->
-    <ion-menu contentId="content" type="push">
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
-            <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(p.url)">
-              <ion-label>
-                  <ion-icon name="quote" slot="start"></ion-icon>
-                {{ p.title }}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-  
-          <ion-item tappable routerLink="/login" routerDirection="root">
-            <ion-icon name="close" slot="start"></ion-icon>
-            Logout
+<ion-split-pane when="false">
+  <!-- type="push" The display type of the menu. Available options: "overlay", "reveal", "push". -->
+  <ion-menu contentId="content" type="push">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+          <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(p.url)">
+            <ion-label>
+              <ion-icon name="quote" slot="start"></ion-icon>
+              {{ p.title }}
+            </ion-label>
           </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet id="content" main></ion-router-outlet>
-  </ion-split-pane>
+        </ion-menu-toggle>
+
+        <ion-item-group >
+          <ion-item-divider>
+            <ion-label>
+              Lancements
+            </ion-label>
+          </ion-item-divider>
+          <ion-menu-toggle auto-hide="false" *ngFor="let l of launches">
+            <ion-item-sliding>
+              <ion-item [routerLink]="l.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(l.url)">
+                <ion-label>
+                  <h3>{{ l.title }}</h3>
+                </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+
+          </ion-menu-toggle>
+        </ion-item-group>
+
+        <ion-item tappable routerLink="/login" routerDirection="root">
+          <ion-icon name="close" slot="start"></ion-icon>
+          logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-pane>

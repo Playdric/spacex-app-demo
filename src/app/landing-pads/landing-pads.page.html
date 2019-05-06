@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>landing-pads</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <!--<app-skeleton *ngIf="!observableLandpads"></app-skeleton>-->
+  <ion-list>
+    <ion-item *ngFor="let l of observableLandpads | async" [ngClass]="{'active': l.active, 'inactive': !l.active}" class="ion-activatable">
+      <ion-ripple-effect></ion-ripple-effect>
+      <ion-label>
+        {{ l.full_name }}
+        
+      </ion-label>
+      <p *ngIf=" l.status == 'active'" > <ion-badge color="primary">{{ l.status }}</ion-badge> </p>
+      <p *ngIf=" l.status == 'retired'" > <ion-badge color="danger">{{ l.status }}</ion-badge></p>
+    </ion-item>
+  </ion-list>
+</ion-content>

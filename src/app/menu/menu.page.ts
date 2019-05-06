@@ -22,6 +22,12 @@ export class MenuPage implements OnInit {
       url: '/menu/second'
     }
   ];
+  launches = [
+    {
+      title: 'Landing-Pads',
+      url: '/landing-pads'
+    }
+  ];
   constructor(private router: Router) {
     this.router.events.subscribe((event: RouterEvent) => {
       if(event && event.url){
