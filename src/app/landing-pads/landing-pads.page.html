@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content> 
-  <!--<app-skeleton *ngIf="!observableLandpads"></app-skeleton>-->
+  <app-skeleton *ngIf="!observableLandpads"></app-skeleton>
   <ion-list>
     <ion-item *ngFor="let l of observableLandpads | async" [ngClass]="{'active': l.active, 'inactive': !l.active}" class="ion-activatable">
       <ion-ripple-effect></ion-ripple-effect>
