@@ -25,7 +25,7 @@ export class MenuPage implements OnInit {
   launches = [
     {
       title: 'Landing-Pads',
-      url: '/landing-pads'
+      url: '/menu/landing-pads'
     }
   ];
   constructor(private router: Router) {

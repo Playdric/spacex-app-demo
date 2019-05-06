@@ -29,6 +29,11 @@ const routes: Routes = [
         path: 'second/details',
         loadChildren: '../details/details.module#DetailsPageModule'
       }
+      ,
+      {
+        path: 'landing-pads',
+        loadChildren: '../landing-pads/landing-pads.module#LandingPadsPageModule'
+      }
     ]
   }
 ];
