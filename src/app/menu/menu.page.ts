@@ -20,6 +20,10 @@ export class MenuPage implements OnInit {
     {
       title: 'Second Page blank',
       url: '/menu/second'
+    },
+    {
+      title: 'About',
+      url: '/menu/about'
     }
   ];
   launches = [

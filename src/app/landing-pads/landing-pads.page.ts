@@ -21,4 +21,8 @@ export class LandingPadsPage implements OnInit {
       2000);
   }
 
+  buttonClick(id: string) {
+    console.log(id);
+  }
+
 }
