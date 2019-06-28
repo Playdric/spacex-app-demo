@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { SkeletonComponent } from '../components/skeleton/skeleton.component';
+import { LaunchService } from '../services/launch.service';
+import { Launch } from '../Models/launch.model';
+import { Observable } from 'rxjs';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +12,17 @@ import { SkeletonComponent } from '../components/skeleton/skeleton.component';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  launch: Launch;
+  constructor(public sanitizer: DomSanitizer, private route: ActivatedRoute, private launchService: LaunchService) { }
 
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      console.log(params.get('missionId'));
+      this.launchService.getLastestLaunch().subscribe(data=> {
+        this.launch = data;
+      });
+    });
+
+    
+  };
 }
