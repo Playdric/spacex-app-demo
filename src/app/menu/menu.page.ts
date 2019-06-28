@@ -24,6 +24,10 @@ export class MenuPage implements OnInit {
     {
       title: 'About',
       url: '/menu/about'
+    },
+    {
+      title: 'Missions',
+      url: '/menu/missions'
     }
   ];
   launches = [

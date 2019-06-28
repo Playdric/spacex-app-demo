@@ -36,6 +36,10 @@ const routes: Routes = [
       {
         path: 'landing-pads',
         loadChildren: '../landing-pads/landing-pads.module#LandingPadsPageModule'
+      },
+      {
+        path: 'missions',
+        loadChildren: '../missions/missions.module#MissionsPageModule'
       }
     ]
   }
