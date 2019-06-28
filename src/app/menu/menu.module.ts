@@ -40,6 +40,10 @@ const routes: Routes = [
       {
         path: 'missions',
         loadChildren: '../missions/missions.module#MissionsPageModule'
+      },
+      { 
+        path: 'history', 
+        loadChildren: '../history/history.module#HistoryPageModule' 
       }
     ]
   }

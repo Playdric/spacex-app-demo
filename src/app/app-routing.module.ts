@@ -7,7 +7,6 @@ const routes: Routes = [
   { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
   { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
 
-
 ];
 
 @NgModule({

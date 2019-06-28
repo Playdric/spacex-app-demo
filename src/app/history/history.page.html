@@ -3,17 +3,17 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Missions</ion-title>
+    <ion-title>History</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content> 
-  <app-skeleton *ngIf="!observableMissions"></app-skeleton>
+  <app-skeleton *ngIf="!observableHistory"></app-skeleton>
   <ion-list>
-    <ion-item *ngFor="let m of observableMissions | async" [ngClass]="{'active': m.active, 'inactive': !m.active}" class="ion-activatable">
+    <ion-item *ngFor="let h of observableHistory | async" [ngClass]="{'active': h.active, 'inactive': !h.active}" class="ion-activatable">
       <ion-ripple-effect></ion-ripple-effect>
       <ion-label>
-        {{ m.mission_name }}
+        {{ h.title }}
         
       </ion-label>
     </ion-item>
