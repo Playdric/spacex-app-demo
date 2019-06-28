@@ -44,6 +44,10 @@ const routes: Routes = [
       { 
         path: 'history', 
         loadChildren: '../history/history.module#HistoryPageModule' 
+      },
+      { 
+        path: 'detail-mission/:missionId', 
+        loadChildren: '../missions/detail-mission/detail-mission.module#DetailMissionPageModule' 
       }
     ]
   }

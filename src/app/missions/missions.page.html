@@ -10,11 +10,14 @@
 <ion-content> 
   <app-skeleton *ngIf="!observableMissions"></app-skeleton>
   <ion-list>
-    <ion-item *ngFor="let m of observableMissions | async" [ngClass]="{'active': m.active, 'inactive': !m.active}" class="ion-activatable">
+    <ion-item button *ngFor="let m of observableMissions | async" 
+    [routerLink]="['detail-mission', m.mission_id]" routerDirection="forward"
+    [ngClass]="{'active': m.active, 'inactive': !m.active}" class="ion-activatable">
       <ion-ripple-effect></ion-ripple-effect>
       <ion-label>
         {{ m.mission_name }}
-        
+        <!-- <a href="/menu/missions/detail-mission/{{m.mission_id}}"> => </a> -->
+         
       </ion-label>
     </ion-item>
   </ion-list>

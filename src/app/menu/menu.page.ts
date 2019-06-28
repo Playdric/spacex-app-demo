@@ -14,31 +14,24 @@ export class MenuPage implements OnInit {
       url: '/menu/home'
     },
     {
-      title: 'First Page with Tabs',
-      url: '/menu/first'
-    },
-    {
-      title: 'Second Page blank',
-      url: '/menu/second'
-    },
-    {
-      title: 'About',
-      url: '/menu/about'
+      title: 'History',
+      url: '/menu/history'
     },
     {
       title: 'Missions',
       url: '/menu/missions'
     },
     {
-      title: 'History',
-      url: '/menu/history'
+      title: 'Landing-Pads',
+      url: '/menu/landing-pads'
+    },
+    {
+      title: 'About',
+      url: '/menu/about'
     }
   ];
   launches = [
-    {
-      title: 'Landing-Pads',
-      url: '/menu/landing-pads'
-    }
+    
   ];
   constructor(private router: Router) {
     this.router.events.subscribe((event: RouterEvent) => {

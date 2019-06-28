@@ -6,6 +6,8 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
   { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
+  
+
 
 ];
 

@@ -5,17 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MissionsPage } from './missions.page';
-import { ComponentsModule } from '../modules/components/components.module';
+import { DetailMissionPage } from './detail-mission.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: MissionsPage
-  },
-  { 
-    path: 'detail-mission/:missionId', 
-    loadChildren: '../detail-mission/detail-mission.module#DetailMissionPageModule' 
+    component: DetailMissionPage
   }
 ];
 
@@ -24,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    ComponentsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [MissionsPage]
+  declarations: [DetailMissionPage]
 })
-export class MissionsPageModule {}
+export class DetailMissionPageModule {}
