@@ -23,4 +23,16 @@ export class MissionsService {
       })
     );
   }
+
+  getOneMission(id: String): Observable<Mission>  {
+    console.log("url one mission", this.apiBaseUrl + 'missions/'+id)
+    const requestEndpoint = this.apiBaseUrl + 'missions/'+id;
+    return this.http.get<Mission>(requestEndpoint).pipe(
+      // finalize(() => this.loader.stop()),
+      map(mission => {
+        return mission;
+      })
+    );
+  }
+
 }

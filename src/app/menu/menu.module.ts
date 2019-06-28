@@ -47,7 +47,7 @@ const routes: Routes = [
       },
       { 
         path: 'detail-mission/:missionId', 
-        loadChildren: '../missions/detail-mission/detail-mission.module#DetailMissionPageModule' 
+        loadChildren: '../detail-mission/detail-mission.module#DetailMissionPageModule' 
       }
     ]
   }

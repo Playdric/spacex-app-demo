@@ -17,9 +17,8 @@ export class AboutPage implements OnInit {
   
   ngOnInit() {
       this.aboutService.getAbout().subscribe(data=> {
-this.about = data;
-      }
-        );
+        this.about = data;
+      });
     }
   }
 
