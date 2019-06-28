@@ -10,16 +10,17 @@ import { Observable } from 'rxjs';
 })
 export class AboutPage implements OnInit {
   about: About;
-  observableAbout: Observable<About>;
+  observableAbout: About;
 
   constructor(private aboutService: AboutService) {
   }
   
   ngOnInit() {
-    setTimeout(() => {
-      this.observableAbout = this.aboutService.getAbout();
-    },
-      2000);
+      this.aboutService.getAbout().subscribe(data=> {
+this.about = data;
+      }
+        );
+    }
   }
 
-}
+
