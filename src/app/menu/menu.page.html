@@ -12,29 +12,13 @@
         <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
           <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(p.url)">
             <ion-label>
-              <ion-icon name="quote" slot="start"></ion-icon>
+              <ion-icon name="paper-plane" slot="start"></ion-icon>
               {{ p.title }}
             </ion-label>
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-item-group >
-          <ion-item-divider>
-            <ion-label>
-              Lancements
-            </ion-label>
-          </ion-item-divider>
-          <ion-menu-toggle auto-hide="false" *ngFor="let l of launches">
-            <ion-item-sliding>
-              <ion-item [routerLink]="l.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(l.url)">
-                <ion-label>
-                  <h3>{{ l.title }}</h3>
-                </ion-label>
-              </ion-item>
-            </ion-item-sliding>
-
-          </ion-menu-toggle>
-        </ion-item-group>
+        
 
         <ion-item tappable routerLink="/login" routerDirection="root">
           <ion-icon name="close" slot="start"></ion-icon>
