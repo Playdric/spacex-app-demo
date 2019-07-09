@@ -23,4 +23,15 @@ export class LandpadService {
       })
     );
   }
+
+  getOneLandpad(id: String): Observable<Landpad>  {
+    const requestEndpoint = this.apiBaseUrl + 'landpads/'+id;
+    return this.http.get<Landpad>(requestEndpoint).pipe(
+      // finalize(() => this.loader.stop()),
+      map(landpad => {
+        return landpad;
+      })
+    );
+  }
+
 }

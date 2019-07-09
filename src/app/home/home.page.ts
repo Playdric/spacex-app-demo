@@ -17,7 +17,6 @@ export class HomePage {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      console.log(params.get('missionId'));
       this.launchService.getLastestLaunch().subscribe(data=> {
         this.launch = data;
       });

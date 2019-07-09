@@ -20,6 +20,10 @@ const routes: Routes = [
         path: 'about',
         loadChildren: '../about/about.module#AboutPageModule'
       },
+      { 
+        path: 'history', 
+        loadChildren: '../history/history.module#HistoryPageModule' 
+      },
       {
         path: 'landing-pads',
         loadChildren: '../landing-pads/landing-pads.module#LandingPadsPageModule'
@@ -29,12 +33,12 @@ const routes: Routes = [
         loadChildren: '../missions/missions.module#MissionsPageModule'
       },
       { 
-        path: 'history', 
-        loadChildren: '../history/history.module#HistoryPageModule' 
-      },
-      { 
         path: 'detail-mission/:missionId', 
         loadChildren: '../detail-mission/detail-mission.module#DetailMissionPageModule' 
+      },
+      { 
+        path: 'detail-landpads/:landpadId', 
+        loadChildren: '../detail-landpads/detail-landpads.module#DetailLandpadsPageModule' 
       }
     ]
   }

@@ -15,7 +15,6 @@ export class DetailMissionPage implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      console.log(params.get('missionId'));
       this.missionService.getOneMission(params.get('missionId')).subscribe(data=> {
         this.mission = data;
       });
