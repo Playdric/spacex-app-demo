@@ -11,7 +11,7 @@
   <app-skeleton *ngIf="!observableLandpads"></app-skeleton>
   <ion-list>
     <ion-item button *ngFor="let l of observableLandpads | async"
-          [routerLink]="['detail-landpad', l.id]" routerDirection="forward"
+          [routerLink]="['detail-landpads', l.id]" routerDirection="forward"
           [ngClass]="{'active': l.active, 'inactive': !l.active}" class="ion-activatable">
       <ion-ripple-effect></ion-ripple-effect>
       <ion-label>

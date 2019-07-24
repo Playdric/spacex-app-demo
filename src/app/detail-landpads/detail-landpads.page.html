@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detail-landpads</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="menu/landing-pads"></ion-back-button>
+        </ion-buttons>
+    <ion-title  class="ion-text-center">{{landpad.full_name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+  <ion-item>
+    <ion-label>Status: </ion-label>
+    <ion-label text-right>
+      <ion-badge *ngIf="landpad.status == 'active'" color="primary">{{ landpad.status }}</ion-badge>
+      <ion-badge *ngIf="landpad.status == 'retired'" color="danger">{{ landpad.status }}</ion-badge>
+  </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Landing type: </ion-label>
+    <ion-label text-right>{{landpad.landing_type}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Attempted landings: </ion-label>
+    <ion-label text-right>{{landpad.attempted_landings}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>successful landings: </ion-label>
+    <ion-label text-right>{{landpad.successful_landings}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Attempted landing: </ion-label>
+    <ion-label text-right>{{landpad.attempted_landings}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Location: </ion-label>
+    <ion-label text-right>{{landpad.location.region}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label text-center>details: </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label text-wrap text-center>{{landpad.details}}</ion-label>
+  </ion-item>
 </ion-content>
