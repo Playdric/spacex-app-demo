@@ -6,11 +6,15 @@
     <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-    Mission : {{launch.mission_name}} <br />
-    Le : {{launch.launch_date_utc}} <br />
-    <img [src]="sanitizer.bypassSecurityTrustUrl(launch.links.mission_patch)"/>
-<br />
-    Ta mère la desc : <br />
-    {{launch.details}}
+<ion-content text-center padding>
+  <ion-label>
+      Mission : {{launch.mission_name}} <br />
+      Le : {{launch.launch_date_utc}} <br />
+  </ion-label>
+  <img [src]="sanitizer.bypassSecurityTrustUrl(launch.links.mission_patch)" width="200" height="200"/>
+  <br />
+  <ion-label>
+      Desctiption : <br />
+      {{launch.details}}
+  </ion-label>
 </ion-content>
