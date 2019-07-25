@@ -32,6 +32,10 @@ const routes: Routes = [
         path: 'missions',
         loadChildren: '../missions/missions.module#MissionsPageModule'
       },
+      {
+        path: 'capsules',
+        loadChildren: '../capsules/capsules.module#CapsulesPageModule'
+      },
       { 
         path: 'detail-mission/:missionId', 
         loadChildren: '../detail-mission/detail-mission.module#DetailMissionPageModule' 
@@ -39,6 +43,9 @@ const routes: Routes = [
       { 
         path: 'detail-landpads/:landpadId', 
         loadChildren: '../detail-landpads/detail-landpads.module#DetailLandpadsPageModule' 
+      },
+      { 
+        path: 'detail-capsules', loadChildren: './detail-capsules/detail-capsules.module#DetailCapsulesPageModule',
       }
     ]
   }

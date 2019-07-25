@@ -22,6 +22,10 @@ export class MenuPage implements OnInit {
       url: '/menu/missions'
     },
     {
+      title: 'Capsules',
+      url: '/menu/capsules'
+    },
+    {
       title: 'Landing-Pads',
       url: '/menu/landing-pads'
     },
